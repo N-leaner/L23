@@ -23,7 +23,8 @@ end
 
 def w_to_f arr
 	output = File.open './public/users.txt', 'a'
-	output.write "user: #{arr[0]}, tel: #{arr[1]}, date: #{arr[2]}, time: #{arr[3]}, master: #{arr[4]}\n"
+	output.write "user: #{arr[0]}, tel: #{arr[1]},"+
+	" date: #{arr[2]}, time: #{arr[3]}, master: #{arr[4]}, color: #{arr[5]}\n"
 	output.close
 end
 
@@ -41,6 +42,7 @@ post '/visit' do
 	@user_phone = params[:user_telephone].strip
 	@date_visit = params[:date_].strip
 	@time_visit = params[:time_].strip
+	@color 		= params[:color].strip
 	@master = params[:master].strip
 	if @user_name == ''
 		@name_error = 'Не указано имя'
@@ -61,6 +63,7 @@ post '/visit' do
 		arr << @date_visit
 		arr << @time_visit
 		arr << @master
+		arr << @color
 		w_to_f arr
 		if @user_phone != ''
 			@reminder = "Мы перезвоним Вам по номеру: #{@user_phone}, \nчтобы напомнить о визите"

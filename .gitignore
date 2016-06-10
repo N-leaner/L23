@@ -12,3 +12,7 @@ public/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff
 public/vendor/bootstrap/js/bootstrap.js
 public/vendor/bootstrap/js/bootstrap.min.js
 public/vendor/jquery-1.9.1.min.js
+public/simplecolorpicker/jquery.simplecolorpicker.css
+public/simplecolorpicker/jquery.simplecolorpicker.js
+public/scripts.js
+public/scripts.js
